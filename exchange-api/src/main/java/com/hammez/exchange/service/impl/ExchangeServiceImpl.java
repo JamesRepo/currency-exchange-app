@@ -30,9 +30,6 @@ public class ExchangeServiceImpl implements ExchangeService {
     }
 
     @Override
-    public void convertCurrencyToAll(String currency) {}
-
-    @Override
     public BigDecimal pairConversion(String baseCurrency, String targetCurrency, String amount) {
         PairConversion pairConversion = getConversionRate(baseCurrency, targetCurrency);
         return convertCurrency(new BigDecimal(amount), pairConversion.getConversionRate());

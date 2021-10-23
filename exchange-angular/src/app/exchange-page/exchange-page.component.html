@@ -1,0 +1,27 @@
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Convert from</mat-label>
+    <mat-select #from>
+      <mat-option *ngFor="let code of currencyCodes" [value]="code">{{ code }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Convert to</mat-label>
+    <mat-select #to>
+      <mat-option *ngFor="let code of currencyCodes" [value]="code">{{ code }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Amount</mat-label>
+    <input matInput #amount>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" >
+    <input matInput disabled type="text" [(ngModel)]="convertedAmount">
+  </mat-form-field>
+
+
+  <button mat-raised-button color="primary" (click)="convert(from.value, to.value, amount.value)">Convert</button>
+</div>
