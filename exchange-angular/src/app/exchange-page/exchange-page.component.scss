@@ -1,0 +1,18 @@
+.exchange-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+
+    .currency-selectors {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .exchange-header {
+        text-align: center;
+    }
+}
