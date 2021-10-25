@@ -1,5 +1,5 @@
 <div class="exchange-content">
-  <h1 class="exchange-header">Exchange</h1>
+  <h1 class="exchange-header">CONVERT A CURRENCY!</h1>
   <div class="currency-selectors">
     <mat-form-field appearance="outline">
       <mat-label>Convert from</mat-label>
@@ -19,7 +19,7 @@
     <input matInput type="number" #amount>
   </mat-form-field>
   <mat-form-field appearance="outline" >
-    <input matInput disabled type="text" [(ngModel)]="convertedAmount">
+    <input matInput readonly type="text" [(ngModel)]="convertedAmount">
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="convert(from.value, to.value, amount.value)">Convert</button>
 </div>
